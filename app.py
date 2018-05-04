@@ -123,5 +123,5 @@ def download_record(filename):
 #    return resp
 
 if __name__ == '__main__':
-    app.run(debug=debug,threaded=False)
+    app.run(debug=debug,threaded=True)
     #app.run(host='0.0.0.0',port=5000,debug=False,threaded=False)
