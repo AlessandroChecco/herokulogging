@@ -1,7 +1,13 @@
 
 {
-  "name": "jupyter",
-  "buildpacks": [
-    { "url": "https://github.com/pl31/heroku-buildpack-conda.git" }
-  ]
+  "name": "REST logger",
+  "description": "Fast ephemeral append-only interface",
+  "repository": "https://github.com/AlessandroChecco/herokulogging",
+  "keywords": ["python", "flask", "REST", "logging"],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
 }
