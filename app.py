@@ -4,7 +4,6 @@ from flask_cors import CORS
 from flask.ext.restful import Api
 import datetime
 import os
-from OpenSSL import SSL
 import signal
 import simpleflock
 class timeout:
@@ -127,5 +126,5 @@ def download_record(filename):
 #    return resp
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=443,debug=debug,threaded=True,ssl_context=context)
+    app.run(host='0.0.0.0',debug=debug,threaded=True)
     #app.run(host='0.0.0.0',port=5000,debug=False,threaded=False)
