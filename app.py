@@ -23,9 +23,9 @@ debug = False
 app = Flask(__name__,static_url_path='/static')
 CORS(app)
 
-@app.route("/")
-def index():
-    return Response("It works!"), 200
+@app.route('/')
+def webprint():
+    return render_template('index.html') 
 
 
 @app.route('/static/<path:path>')
