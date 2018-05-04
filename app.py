@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 from flask import Flask, request, send_from_directory, jsonify, Response, json, abort, send_file
 from flask_cors import CORS
-from flask.ext.restful import Api
 import datetime
 import os
 import signal
@@ -22,7 +21,6 @@ class timeout:
 debug = False
 
 app = Flask(__name__,static_url_path='/static')
-api = Api(app)
 CORS(app)
 
 @app.route("/")
