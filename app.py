@@ -18,7 +18,6 @@ class timeout:
     def __exit__(self, type, value, traceback):
         signal.alarm(0)
 
-context = ('/etc/letsencrypt/live/alessandrochecco.info/fullchain.pem', '/etc/letsencrypt/live/alessandrochecco.info/privkey.pem')
 
 debug = False
 
@@ -126,5 +125,5 @@ def download_record(filename):
 #    return resp
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',debug=debug,threaded=True)
+    app.run(debug=debug,threaded=False)
     #app.run(host='0.0.0.0',port=5000,debug=False,threaded=False)
