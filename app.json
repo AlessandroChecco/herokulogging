@@ -5,7 +5,7 @@
   "repository": "https://github.com/AlessandroChecco/herokulogging",
   "keywords": ["python", "flask", "REST", "logging"],
   "formation": {
-    "worker": {
+    "web": {
       "quantity": 1,
       "size": "free"
     }
