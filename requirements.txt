@@ -1,6 +1,4 @@
 flask
-os
 OpenSSL
 flask_cors
-signal
 simpleflock
