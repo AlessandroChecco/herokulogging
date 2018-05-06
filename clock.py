@@ -6,7 +6,6 @@ sched = Scheduler()
 
 @sched.interval_schedule(minutes=1)
 def timed_job():
-    print 'try'
     r = requests.get(os.environ.get('CURRENTDOMAIN'))
     print 'KEEPING ALIVE: '+os.environ.get('CURRENTDOMAIN')
     print r.status_code
