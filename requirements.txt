@@ -2,5 +2,5 @@ flask
 flask_cors
 simpleflock
 gunicorn
-APScheduler
+apscheduler==2.1.2
 requests
