@@ -1,11 +1,12 @@
 from apscheduler.scheduler import Scheduler
 import requests
+import os
 
 sched = Scheduler()
 
 @sched.interval_schedule(minutes=1)
 def timed_job():
-    r = requests.get('https://fast-logging.herokuapp.com/')
+    r = requests.get(os.environ.get('CURRENTDOMAIN'))
     print 'KEEPING ALIVE'
     print r.status_code
 
