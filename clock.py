@@ -4,7 +4,7 @@ import os
 
 sched = Scheduler()
 
-@sched.interval_schedule(minutes=1)
+@sched.interval_schedule(minutes=10)
 def timed_job():
     r = requests.get(os.environ.get('CURRENTDOMAIN'))
     print 'KEEPING ALIVE: '+os.environ.get('CURRENTDOMAIN')
