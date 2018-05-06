@@ -3,7 +3,7 @@ import requests
 
 sched = Scheduler()
 
-@sched.interval_schedule(minutes=10)
+@sched.interval_schedule(minutes=1)
 def timed_job():
     r = requests.get('https://fast-logging.herokuapp.com/')
     print 'KEEPING ALIVE'
